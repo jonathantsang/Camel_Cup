@@ -149,19 +149,16 @@ class Game():
 
 				# Place trap
 				elif inp[0] == 'pt':
-					# This can fail due to not valid trap space
 					self.traps[i] = (int(inp[1]), int(inp[2]))					
 
 				# Vote loser
 				elif inp[0] == 'vl':
 					camelid = int(self.camelarray.index(inp[1]))
-					# This can fail if you don't own the card for voting winner/loser
 					self.loserguesses.append((camelid, i))
 
 				# Vote winner
 				elif inp[0] == 'vw':
 					camelid = int(self.camelarray.index(inp[1]))
-					# This can fail if you don't own the card for voting winner/loser
 					self.winnerguesses.append((camelid, i))
 
 				# Vote camel
