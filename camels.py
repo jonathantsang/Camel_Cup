@@ -154,13 +154,13 @@ class Game():
 
 				# Vote loser
 				elif inp[0] == 'vl':
-					camelid = int(self.camelarray.find(inp[1]))
+					camelid = int(self.camelarray.index(inp[1]))
 					# This can fail if you don't own the card for voting winner/loser
 					self.loserguesses.append((camelid, i))
 
 				# Vote winner
 				elif inp[0] == 'vw':
-					int(self.camelarray.index(inp[1]))
+					camelid = int(self.camelarray.index(inp[1]))
 					# This can fail if you don't own the card for voting winner/loser
 					self.winnerguesses.append((camelid, i))
 
